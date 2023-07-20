@@ -106,21 +106,28 @@ const Shop = () => {
 							</div>
 						</div> */}
 						<div className='products-container'>
-							{products.length
-								? products.map(product => (
-										<>
-											<Card
-												productName={product.name}
-												img={product.images[0]}
-												key={product._id}
-												price={product.price}
-												size={product.size}
-												id={product._id}
-												stock={product.stock}
-											/>
-										</>
-								  ))
-								: null}
+							{products.length ? (
+								products.map(product => (
+									<>
+										<Card
+											productName={product.name}
+											img={product.images[0]}
+											key={product._id}
+											price={product.price}
+											size={product.size}
+											id={product._id}
+											stock={product.stock}
+										/>
+									</>
+								))
+							) : (
+								<h1
+									className='text-center p-4'
+									style={{ fontSize: '1.3rem', letterSpacing: '2px' }}
+								>
+									Sorry...There Is No Item That Match Your Requirements
+								</h1>
+							)}
 						</div>
 					</div>
 					{resPerPage < filteredProductsLength && (

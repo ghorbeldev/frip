@@ -99,24 +99,35 @@
 			}
 			.dropdown-toggle {
 				transition: all 0.2s ease-in;
-				&:hover {
+				@include flex(center, flex-start);
+				span {
+					transition: all 400ms ease-in-out;
+				}
+				&:hover span {
 					color: $primary;
 				}
 			}
 			&__cart {
 				position: relative;
+				&:hover {
+					svg {
+						color: $primary;
+					}
+					.total_items {
+						background-color: $primary;
+					}
+				}
+				> a {
+					@include flex(center, flex-start);
+				}
 				button {
-					@include flex;
+					@include flex(flex-start);
 					padding: 0.7rem;
 					border-radius: 0.2rem;
 					svg {
 						transition: all 0.2s ease-in-out;
 					}
-					&:hover {
-						svg {
-							color: $primary;
-						}
-					}
+
 					svg {
 						font-size: 1.5rem;
 					}
@@ -135,11 +146,6 @@
 					transform: translate(-50%, -50%);
 					transition: all 0.3s ease-out;
 				}
-				&:hover {
-					.total_items {
-						background: $primary;
-					}
-				}
 			}
 			&__login {
 				button {
@@ -154,13 +160,15 @@
 			@include flex;
 			list-style: none;
 			li {
-				padding: 0.5rem;
+				@include flex(center, stretch);
 				font-weight: 500;
 				font-size: 1.1rem;
 				cursor: pointer;
 				color: $secondary;
 				a {
 					color: inherit;
+					padding: 0.5rem;
+					width: 100%;
 					transition: all 0.3s ease-in;
 					text-decoration: none;
 					&:hover {
@@ -297,6 +305,11 @@
 					&__cart {
 						border-bottom: 1px solid #aaa;
 						width: 100%;
+						&:hover {
+							.total_items {
+								background-color: $primary;
+							}
+						}
 						button {
 							font-size: 1.3rem;
 							color: white;

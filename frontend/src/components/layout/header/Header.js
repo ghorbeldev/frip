@@ -88,13 +88,19 @@ const Header = () => {
 					<div className='info'>
 						<ul className='nav'>
 							<li className='underline'>
-								<Link to={'/'}>Home</Link>
+								<Link to={'/'} onClick={() => setSidebarOpen(false)}>
+									Home
+								</Link>
 							</li>
 							<li className='underline'>
-								<Link to={'/shop'}>Shop</Link>
+								<Link to={'/shop'} onClick={() => setSidebarOpen(false)}>
+									Shop
+								</Link>
 							</li>
 							<li className='underline'>
-								<Link to={'/contact'}>Contact</Link>
+								<Link to={'/contact'} onClick={() => setSidebarOpen(false)}>
+									Contact
+								</Link>
 							</li>
 						</ul>
 						<div className='user'>
@@ -110,14 +116,26 @@ const Header = () => {
 										</Dropdown.Toggle>
 										<Dropdown.Menu>
 											{user && user.role === 'admin' && (
-												<Dropdown.Item as={Link} to='/dashboard'>
+												<Dropdown.Item
+													as={Link}
+													to='/dashboard'
+													onClick={() => setSidebarOpen(false)}
+												>
 													Dashboard
 												</Dropdown.Item>
 											)}
-											<Dropdown.Item as={Link} to='/orders/me'>
+											<Dropdown.Item
+												as={Link}
+												to='/orders/me'
+												onClick={() => setSidebarOpen(false)}
+											>
 												Orders
 											</Dropdown.Item>
-											<Dropdown.Item as={Link} to='/me'>
+											<Dropdown.Item
+												as={Link}
+												to='/me'
+												onClick={() => setSidebarOpen(false)}
+											>
 												Profile
 											</Dropdown.Item>
 											<Dropdown.Item
