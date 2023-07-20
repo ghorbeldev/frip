@@ -27,9 +27,7 @@
 			transform: scale(0.8);
 		}
 	}
-	@include mobile {
-		flex-wrap: wrap;
-	}
+
 	@include flex(center, space-between);
 	padding: 1rem 2rem;
 	.logo {
