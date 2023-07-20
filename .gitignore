@@ -1,21 +1,17 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
-/node_modules
-/frontend/node_modules
+/node_modules/
+/frontend/node_modules/
 
-# testing
-/coverage
 
 # production
 /frontend/build
 
 # misc
 /backend/config/config.env
-/frontned/.env.local
-/frontned/.env.development.local
-/frontned/.env.test.local
-/frontned/.env.production.local
+/frontend/.env.local
+/frontend/.env.development.local
+/frontend/.env.test.local
+/frontend/.env.production.local
 
 npm-debug.log*
 yarn-debug.log*
