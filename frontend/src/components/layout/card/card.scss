@@ -1,0 +1,90 @@
+@use '../../../scss/abstracts/' as *;
+
+.card {
+	@include flex;
+	flex-direction: column;
+	border-radius: 8px;
+	border: 1px solid #eee;
+	box-shadow: 2px 2px 16px 2px #ddd;
+	width: 300px;
+	a {
+		width: 100%;
+	}
+	&__img {
+		@include flex;
+		cursor: pointer;
+		position: relative;
+		height: 280px;
+		border-radius: 8px 8px 0 0;
+		overflow: hidden;
+		&:after {
+			@include flex;
+			content: 'View Details';
+			text-align: center;
+			position: absolute;
+			width: 100%;
+			height: 50%;
+			background-color: rgba($primary, 0.4);
+			color: white;
+			font-weight: 400;
+			letter-spacing: 4px;
+			font-size: 1.4rem;
+			bottom: 0;
+			left: 0;
+			transform: translateY(100%);
+			transition: all 0.25s ease-in-out;
+		}
+		img {
+			width: 100%;
+			transition: all 0.3s ease-in-out;
+			border-radius: inherit;
+			transform: scale(1);
+		}
+		&:hover {
+			&:after {
+				transform: translateY(0);
+			}
+			img {
+				transform: scale(1.2) rotate(10deg);
+			}
+		}
+	}
+	&__title {
+		font-size: 1.25rem;
+		margin-top: 1.5rem;
+		color: black;
+	}
+	&__details {
+		@include flex(center, space-evenly);
+		width: 100%;
+		font-size: 1.1rem;
+		margin-top: 1rem;
+		.price {
+			font-weight: bold;
+			font-size: 1.2rem;
+			color: black;
+		}
+		.size {
+			font-weight: lighter;
+			font-size: 1.2rem;
+			color: black;
+		}
+	}
+	&__add {
+		padding: 1rem 1.5rem;
+		font-size: 1.2rem;
+		border-radius: 8px;
+		margin-top: 1rem;
+		margin-bottom: 1.5rem;
+		color: black;
+		&:disabled,
+		&[disabled] {
+			border: 1px solid #999999;
+			background-color: #cccccc;
+			color: #666666;
+			&:before {
+				background-color: #cccccc;
+			}
+		}
+	}
+}

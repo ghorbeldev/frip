@@ -1,0 +1,26 @@
+@use '../../../scss//abstracts/' as *;
+#register {
+	margin-top: $header-height;
+	@include flex;
+	min-height: calc(100vh - $header-height);
+	form {
+		padding: 2rem;
+		a {
+			width: 100%;
+			text-align: end;
+			display: inline-flex;
+			justify-content: flex-end;
+			margin: 1rem 0;
+		}
+		#register_button {
+			width: 100%;
+			background-color: $primary;
+			padding: 0.8rem;
+			color: white;
+			margin-top: 2rem;
+		}
+		.form-group:last-of-type {
+			margin-top: 1.5rem;
+		}
+	}
+}

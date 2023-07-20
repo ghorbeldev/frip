@@ -1,0 +1,44 @@
+@use '../../../scss/abstracts/' as *;
+#profile {
+	margin-top: $header-height;
+	min-height: calc(100vh - $header-height);
+	h2 {
+		text-align: center;
+	}
+	.data {
+		@include flex(flex-start, center);
+		flex-direction: column;
+		max-width: 500px;
+		width: 100%;
+		border-radius: 8px;
+		border: 2px solid #eee;
+		box-shadow: 2px 2px 16px 2px #ddd;
+		margin-top: 2rem;
+		padding: 1.5rem;
+		a {
+			margin-top: 2rem;
+		}
+	}
+}
+.avatar-profile {
+	height: 16rem;
+	width: 16rem;
+}
+
+.user-info h4 {
+	font-weight: 800;
+	color: grey;
+	&:not(:first-of-type) {
+		margin-top: 2rem;
+	}
+}
+
+.user-info p {
+	font-size: 1.1rem;
+	margin-bottom: 0;
+}
+
+#edit_profile {
+	background-color: $primary;
+	border-color: $primary;
+}

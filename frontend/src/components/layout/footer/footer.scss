@@ -1,0 +1,28 @@
+@use '../../../scss/abstracts/' as *;
+
+#footer {
+	@include flex(center, space-between);
+	width: 100%;
+	background-color: #010101;
+	text-align: center;
+	color: white;
+	padding: 2rem 2rem 1rem 2rem;
+	p {
+		font-size: 0.8rem;
+		color: white;
+		line-height: 1.8;
+		font-weight: 400;
+	}
+	.social-media {
+		@include flex;
+		list-style-type: none;
+		li {
+			a {
+				font-size: 1.1rem;
+				font-weight: lighter;
+				padding: 0.5rem;
+				color: white;
+			}
+		}
+	}
+}

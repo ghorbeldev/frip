@@ -1,0 +1,9 @@
+@use '../../../scss/abstracts/' as *;
+#update-profile {
+	margin-top: $header-height;
+	min-height: calc(100vh - $header-height);
+	@include flex;
+	form {
+		padding: 2rem;
+	}
+}

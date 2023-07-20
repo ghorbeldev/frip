@@ -1,0 +1,15 @@
+.custom-table {
+	table,
+	th,
+	td {
+		border: 1px solid black;
+		padding: 0.4rem;
+	}
+	th,
+	tr:nth-child(even) {
+		background-color: #eee;
+	}
+	td.pivoted:not(:last-child) {
+		border-bottom: 1px solid #aaa !important;
+	}
+}

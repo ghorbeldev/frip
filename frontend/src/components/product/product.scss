@@ -1,0 +1,22 @@
+@use '../../scss/abstracts' as *;
+
+.product-wrapper {
+	margin-top: $header-height;
+	min-height: calc(100vh - $header-height);
+	@include flex(center, space-around);
+	padding: 1rem 2rem;
+	@include desktop {
+		flex-direction: column;
+	}
+	button:disabled,
+	button[disabled] {
+		border: 1px solid #999999;
+		background-color: #cccccc;
+		color: #666666;
+		&:before {
+			background-color: #cccccc;
+		}
+	}
+	&__image {
+	}
+}

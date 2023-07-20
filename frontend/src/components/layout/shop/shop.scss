@@ -1,0 +1,24 @@
+@use '../../../scss/abstracts/' as *;
+#shop {
+	margin-top: $header-height;
+	min-height: calc(100vh - $header-height);
+	.shop-wrapper {
+		@include flex;
+		min-height: 100%;
+		width: 100vw;
+		// @include flex(flex-start, space-between);
+		padding: 2rem;
+
+		.products-container {
+			@include flex(center, center);
+			flex-wrap: wrap;
+			gap: 2rem;
+		}
+	}
+	.pagination {
+		@include flex;
+		width: 100%;
+		padding: 1rem;
+		margin: auto;
+	}
+}

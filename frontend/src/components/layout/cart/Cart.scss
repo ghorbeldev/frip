@@ -1,0 +1,20 @@
+@use '../../../scss//abstracts/' as *;
+
+#cart {
+	margin-top: $header-height;
+	min-height: calc(100vh - $header-height);
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+.cart-item {
+	@include flex(center, space-between);
+	padding: 1.5rem 1rem;
+	border-radius: 8px;
+	border: 2px solid #ddd;
+	&:not(:last-of-type) {
+		margin-bottom: 2rem;
+	}
+	p {
+		margin-bottom: 0;
+	}
+}

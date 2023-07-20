@@ -1,0 +1,141 @@
+@use '../../../scss/abstracts/' as *;
+.contact {
+	.heading {
+		font-size: 2.5rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		@include flex(center, flex-start);
+		color: $secondary;
+		letter-spacing: 5px;
+		margin-bottom: 2rem;
+		margin-top: 1.5rem;
+		&::before {
+			content: '';
+			height: 2px;
+			width: 3rem;
+			margin-right: 5px;
+			background-color: currentColor;
+			@include desktop {
+				width: 2.4rem;
+			}
+		}
+		@include desktop {
+			justify-content: center;
+			&::after {
+				content: '';
+				height: 2px;
+				width: 2.4rem;
+				margin-right: 5px;
+				background-color: currentColor;
+			}
+		}
+		@include mobile {
+			font-size: 1.9rem;
+			text-align: center;
+		}
+	}
+	.container {
+		width: 100vw;
+		margin-top: $header-height;
+		min-height: calc(100vh - $header-height);
+		@include flex(stretch, center);
+		flex-direction: column;
+	}
+	&__content {
+		flex: 1;
+		@include flex(unset, space-between);
+		@include tablet {
+			flex-direction: column-reverse;
+			text-align: center;
+		}
+		form {
+			flex-basis: 70%;
+			.main-input {
+				padding: 20px;
+				display: block;
+				border: 1px solid #222;
+				width: 100%;
+				margin-bottom: 25px;
+			}
+			textarea {
+				resize: none;
+				height: 200px;
+			}
+			input {
+				&[type='submit'] {
+					display: block;
+					border: none;
+					font-size: 1.1rem;
+					width: fit-content;
+					padding: 0.7rem 1.4rem;
+					background-color: $secondary;
+					color: #fff;
+					margin-left: auto;
+					cursor: pointer;
+					transition: all 0.4s;
+				}
+
+				&:hover {
+					background-color: #fff;
+					color: $secondary;
+					border: 1px solid $secondary;
+					font-weight: 700;
+				}
+			}
+		}
+		.info {
+			flex-basis: 25%;
+			color: #e1e1e1;
+			h4 {
+				text-transform: uppercase;
+				margin-bottom: 1.5rem;
+				font-weight: 550;
+				font-size: 1.3rem;
+				color: $secondary;
+			}
+			&__contact {
+				display: block;
+				margin-bottom: 1rem;
+				color: currentColor;
+				font-size: 1.4rem;
+				width: fit-content;
+				background-color: $secondary;
+				border-radius: 0.4rem;
+				cursor: pointer;
+				padding: 0.5rem 1rem;
+				@include flex(center, flex-start);
+				transition: 0.2s all;
+				&:hover {
+					background-color: $primary;
+					color: $secondary;
+					transition: 0.4s all;
+				}
+				svg {
+					margin-right: 1rem;
+				}
+				span {
+					font-size: 1rem;
+					display: inline-block;
+				}
+			}
+			&__thanks {
+				color: $secondary;
+				margin-top: 5rem;
+				font-weight: 500;
+			}
+			&__thanks + p {
+				color: lighten($secondary, 10%);
+				font-size: 1rem;
+				font-weight: 300;
+				line-height: 1.8;
+				letter-spacing: 2px;
+			}
+			@include tablet {
+				margin-bottom: 30px;
+				&__thanks {
+					margin-top: 2.5rem;
+				}
+			}
+		}
+	}
+}

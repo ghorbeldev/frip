@@ -1,0 +1,174 @@
+@use './abstracts/' as *;
+@import '../../node_modules/bootstrap/scss/bootstrap';
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button,
+input {
+	outline: none;
+	border: none;
+	background: none;
+}
+a {
+	text-decoration: none;
+}
+
+.underline {
+	position: relative;
+	&:hover {
+		color: $primary;
+		a {
+			color: $primary;
+		}
+	}
+}
+
+.underline::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background-color: $primary;
+	transform-origin: bottom right;
+	transform: scaleX(0);
+	transition: transform 0.5s ease;
+}
+
+.underline:hover::before {
+	transform-origin: bottom left;
+	transform: scaleX(1);
+}
+
+.avatar {
+	display: inline-block;
+	margin-bottom: 0;
+	height: 3rem;
+	width: 3rem;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+.mt-header {
+	margin-top: $header-height;
+}
+.mt-header-lg {
+	margin-top: $header-height;
+	@include tablet {
+		margin-top: 0;
+	}
+}
+
+.wrapper {
+	margin-top: $header-height;
+	min-height: calc(100vh - $header-height);
+	@include flex;
+	form {
+		padding: 2rem;
+	}
+}
+form .btn {
+	background-color: $primary;
+	border-color: $primary;
+	color: white;
+	// margin-top: 2.5rem;
+	width: 100%;
+	transition: all 0.3s ease-in-out;
+	&:hover {
+		filter: brightness(90%);
+	}
+}
+
+.avatar img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.avatar-profile {
+	height: 16rem;
+	width: 16rem;
+}
+button.slide {
+	border: 2px solid $primary;
+	border-radius: 8px;
+	padding: 1rem 1.4rem;
+	text-decoration: none;
+	overflow: hidden;
+}
+button.slide {
+	z-index: 1;
+	position: relative;
+	font-size: inherit;
+	font-family: inherit;
+	color: $primary;
+}
+
+button.slide::before {
+	content: '';
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: $primary;
+	transform-origin: center right;
+	transform: scaleX(0);
+	transition: transform 0.25s ease-in-out;
+}
+
+button.slide:hover {
+	cursor: pointer;
+	color: white;
+	a {
+		color: white;
+	}
+}
+
+button.slide:hover::before {
+	transform-origin: center left;
+	transform: scaleX(1);
+}
+::-webkit-scrollbar-track {
+	background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(66, 66, 66, 0.2);
+	border: 0px;
+	background-clip: padding-box;
+	border-radius: 5px;
+}
+
+.greenColor {
+	color: #4bb543;
+}
+.redColor {
+	color: #ff3333;
+}
+.btn-primary {
+	color: white;
+}

@@ -1,0 +1,23 @@
+@use '../../../scss//abstracts/' as *;
+#login {
+	margin-top: $header-height;
+	@include flex;
+	min-height: calc(100vh - $header-height);
+	form {
+		padding: 2rem;
+		text-align: left;
+		a {
+			width: 100%;
+			text-align: end;
+			display: inline-flex;
+			justify-content: flex-end;
+			margin: 1rem 0;
+		}
+		#login_button {
+			width: 100%;
+			background-color: $primary;
+			padding: 0.8rem;
+			color: white;
+		}
+	}
+}
