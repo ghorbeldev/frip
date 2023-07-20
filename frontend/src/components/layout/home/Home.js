@@ -17,7 +17,7 @@ const Home = () => {
 			return alert.error(error);
 		}
 		dispatch(fetchProducts());
-	}, [dispatch, error, alert]);
+	}, [dispatch, error]);
 	return (
 		<>
 			<MetaData title={'Home'} />
