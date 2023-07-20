@@ -57,14 +57,17 @@
 			font-size: 1rem;
 			padding-left: 1rem;
 			border-radius: 0.2rem 0 0 0.2rem;
-			min-width: 400px;
+			min-width: 350px;
 			&:placeholder-shown {
 				color: black;
 				font-weight: 500;
 				font-size: 1rem;
 			}
 			@include desktop {
-				min-width: 300px;
+				min-width: 250px;
+			}
+			@include mobile {
+				min-width: 80%;
 			}
 		}
 		@include mobile {
@@ -211,21 +214,42 @@
 		.search {
 			margin: 0 auto;
 		}
+		.toggle-menu {
+			visibility: hidden;
+			display: none;
+			color: white;
+			.bar {
+				background-color: white;
+			}
+		}
+		.info {
+			margin-bottom: auto;
+		}
+		@include mobile {
+			.toggle-menu {
+				visibility: visible;
+				display: flex;
+			}
+			.btn.dropdown-toggle {
+				@include flex(center, flex-start);
+			}
+		}
 	}
 	@include desktop {
 		.toggle-menu {
 			display: flex;
 		}
 		.sidebar {
+			width: 400px;
+			max-width: 100%;
 			flex-direction: column;
 			position: fixed;
 			height: 100vh;
 			top: 0;
 			left: 0;
 			z-index: 999;
-			width: fit-content;
 			padding: 2rem;
-			background-color: #333;
+			background-color: darken($secondary, 2.5%);
 			transform: translateX(-100%);
 			transition: transform 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
 			.search {

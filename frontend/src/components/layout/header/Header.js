@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useAlert } from 'react-alert';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { logout } from '../../../redux/features/user/authSlice';
+import { GrClose } from 'react-icons/gr';
 const Header = () => {
 	const [sidebarOpen, setSidebarOpen] = useState(false);
 	const [keyword, setKeyword] = useState('');
@@ -62,6 +63,14 @@ const Header = () => {
 					<span className='bar'></span>
 				</div>
 				<div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+					<div
+						className='sidebar__close toggle-menu close'
+						onClick={toggleSidebar}
+					>
+						<span className='bar'></span>
+						<span className='bar'></span>
+						<span className='bar'></span>
+					</div>
 					{/* Search Bar */}
 					<form className='search' onSubmit={searchHandler}>
 						<input
@@ -92,7 +101,11 @@ const Header = () => {
 							<div className='user__login'>
 								{isAuthenticated ? (
 									<Dropdown>
-										<Dropdown.Toggle as={Link} to={'#!'} className='btn'>
+										<Dropdown.Toggle
+											as={Link}
+											to={'#!'}
+											className='btn underline'
+										>
 											<span>{user && user.name}</span>
 										</Dropdown.Toggle>
 										<Dropdown.Menu>
@@ -126,7 +139,7 @@ const Header = () => {
 								)}
 							</div>
 							<div className='user__cart'>
-								<Link to='/cart'>
+								<Link to='/cart' className='underline'>
 									<button>
 										<FiShoppingCart />
 									</button>
