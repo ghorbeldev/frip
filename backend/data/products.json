@@ -1,0 +1,246 @@
+[
+	{
+		"name": "Mathilda",
+		"price": "22",
+		"size": "xl",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\nnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium\noptio,",
+		"images": [
+			{
+				"public_id": "1",
+				"url": "/images/test.jpg"
+			},
+			{
+				"public_id": "111",
+				"url": "/images/test.jpg"
+			}
+		],
+		"category": "kids",
+		"seller": "Ottilie",
+		"stock": "2",
+		"createdAt": "Mon Jul 03 2023 22:40:35 GMT+0100 (GMT+01:00)"
+	},
+	{
+		"name": "Violet",
+		"price": "18",
+		"size": "s",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\nnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium\noptio,",
+		"images": [
+			{
+				"public_id": "2",
+				"url": "/images/test.jpg"
+			}
+		],
+		"category": "kids",
+		"seller": "Tilly",
+		"stock": "1",
+		"createdAt": "Mon Jul 03 2023 22:40:35 GMT+0100 (GMT+01:00)"
+	},
+	{
+		"name": "Claresta",
+		"price": "67",
+		"size": "xl",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\nnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium\noptio,",
+		"images": [
+			{
+				"public_id": "3",
+				"url": "/images/test.jpg"
+			}
+		],
+		"category": "women",
+		"seller": "Codie",
+		"stock": "1",
+		"createdAt": "Mon Jul 03 2023 22:40:35 GMT+0100 (GMT+01:00)"
+	},
+	{
+		"name": "Adelle",
+		"price": "1",
+		"size": "s",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\nnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium\noptio,",
+		"images": [
+			{
+				"public_id": "4",
+				"url": "/images/test.jpg"
+			}
+		],
+		"category": "kids",
+		"seller": "Jeanna",
+		"stock": "5",
+		"createdAt": "Mon Jul 03 2023 22:40:35 GMT+0100 (GMT+01:00)"
+	},
+	{
+		"name": "Selia",
+		"price": "42",
+		"size": "xxl",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\nnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium\noptio,",
+		"images": [
+			{
+				"public_id": "5",
+				"url": "/images/test.jpg"
+			}
+		],
+		"category": "women",
+		"seller": "Sarette",
+		"stock": "3",
+		"createdAt": "Mon Jul 03 2023 22:40:35 GMT+0100 (GMT+01:00)"
+	},
+	{
+		"name": "Gabi",
+		"price": "84",
+		"size": "m",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\nnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium\noptio,",
+		"images": [
+			{
+				"public_id": "6",
+				"url": "/images/test.jpg"
+			}
+		],
+		"category": "women",
+		"seller": "Rosanne",
+		"stock": "1",
+		"createdAt": "Mon Jul 03 2023 22:40:35 GMT+0100 (GMT+01:00)"
+	},
+	{
+		"name": "Konstance",
+		"price": "42",
+		"size": "xl",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\nnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium\noptio,",
+		"images": [
+			{
+				"public_id": "7",
+				"url": "/images/test.jpg"
+			}
+		],
+		"category": "men",
+		"seller": "Cassondra",
+		"stock": "4",
+		"createdAt": "Mon Jul 03 2023 22:40:35 GMT+0100 (GMT+01:00)"
+	},
+	{
+		"name": "Clo",
+		"price": "71",
+		"size": "l",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\nnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium\noptio,",
+		"images": [
+			{
+				"public_id": "8",
+				"url": "/images/test.jpg"
+			}
+		],
+		"category": "kids",
+		"seller": "Tori",
+		"stock": "1",
+		"createdAt": "Mon Jul 03 2023 22:40:35 GMT+0100 (GMT+01:00)"
+	},
+	{
+		"name": "Gertrud",
+		"price": "49",
+		"size": "l",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\nnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium\noptio,",
+		"images": [
+			{
+				"public_id": "9",
+				"url": "/images/test.jpg"
+			}
+		],
+		"category": "kids",
+		"seller": "Doralynne",
+		"stock": "3",
+		"createdAt": "Mon Jul 03 2023 22:40:35 GMT+0100 (GMT+01:00)"
+	},
+	{
+		"name": "Ariela",
+		"price": "58",
+		"size": "xxl",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\nnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium\noptio,",
+		"images": [
+			{
+				"public_id": "10",
+				"url": "/images/test.jpg"
+			}
+		],
+		"category": "kids",
+		"seller": "Tera",
+		"stock": "2",
+		"createdAt": "Mon Jul 03 2023 22:40:35 GMT+0100 (GMT+01:00)"
+	},
+	{
+		"name": "Rosabelle",
+		"price": "94",
+		"size": "m",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\nnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium\noptio,",
+		"images": [
+			{
+				"public_id": "11",
+				"url": "/images/test.jpg"
+			}
+		],
+		"category": "women",
+		"seller": "Deloria",
+		"stock": "1",
+		"createdAt": "Mon Jul 03 2023 22:40:35 GMT+0100 (GMT+01:00)"
+	},
+	{
+		"name": "Lolita",
+		"price": "45",
+		"size": "xl",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\nnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium\noptio,",
+		"images": [
+			{
+				"public_id": "12",
+				"url": "/images/test.jpg"
+			}
+		],
+		"category": "men",
+		"seller": "Starla",
+		"stock": "2",
+		"createdAt": "Mon Jul 03 2023 22:40:35 GMT+0100 (GMT+01:00)"
+	},
+	{
+		"name": "Liana",
+		"price": "40",
+		"size": "xl",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\nnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium\noptio,",
+		"images": [
+			{
+				"public_id": "13",
+				"url": "/images/test.jpg"
+			}
+		],
+		"category": "women",
+		"seller": "Berget",
+		"stock": "1",
+		"createdAt": "Mon Jul 03 2023 22:40:35 GMT+0100 (GMT+01:00)"
+	},
+	{
+		"name": "Anica",
+		"price": "32",
+		"size": "xl",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\nnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium\noptio,",
+		"images": [
+			{
+				"public_id": "14",
+				"url": "/images/test.jpg"
+			}
+		],
+		"category": "men",
+		"seller": "Tarra",
+		"stock": "5",
+		"createdAt": "Mon Jul 03 2023 22:40:35 GMT+0100 (GMT+01:00)"
+	},
+	{
+		"name": "Randa",
+		"price": "88",
+		"size": "m",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\nnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium\noptio,",
+		"images": [
+			{
+				"public_id": "15",
+				"url": "/images/test.jpg"
+			}
+		],
+		"category": "men",
+		"seller": "Steffane",
+		"stock": "3",
+		"createdAt": "Mon Jul 03 2023 22:40:35 GMT+0100 (GMT+01:00)"
+	}
+]
