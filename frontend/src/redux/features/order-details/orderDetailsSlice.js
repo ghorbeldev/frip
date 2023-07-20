@@ -41,7 +41,7 @@ const orderDetailsSLice = createSlice({
 		builder.addCase(getOrderDetails.rejected, (state, action) => {
 			state.loading = false;
 			state.order = {};
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 	},
 });

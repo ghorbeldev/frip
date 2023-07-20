@@ -43,10 +43,10 @@ const allOrdersSLice = createSlice({
 			state.loading = false;
 			state.orders = [];
 			console.log(action.error);
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 			state.totalAmount = null;
 
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 	},
 });

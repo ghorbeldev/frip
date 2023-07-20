@@ -12,12 +12,13 @@ const Home = () => {
 	const dispatch = useDispatch();
 	const { loading, products, error } = useSelector(state => state.products);
 	const alert = useAlert();
+	console.log(error);
 	useEffect(() => {
 		if (error) {
 			return alert.error(error);
 		}
 		dispatch(fetchProducts());
-	}, [dispatch, error]);
+	}, [error]);
 	return (
 		<>
 			<MetaData title={'Home'} />

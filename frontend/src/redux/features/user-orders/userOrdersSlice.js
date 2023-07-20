@@ -41,7 +41,7 @@ const userOrdersSlice = createSlice({
 		builder.addCase(fetchLoggedInUserOrders.rejected, (state, action) => {
 			state.loading = false;
 			state.orders = [];
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 	},
 });

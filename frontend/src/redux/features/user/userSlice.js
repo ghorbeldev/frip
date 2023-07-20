@@ -119,7 +119,7 @@ const userSlice = createSlice({
 		builder.addCase(updateProfile.rejected, (state, action) => {
 			state.loading = false;
 			state.isUpdated = false;
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 
 		builder.addCase(updatePassword.pending, (state, action) => {
@@ -138,7 +138,7 @@ const userSlice = createSlice({
 		builder.addCase(updatePassword.rejected, (state, action) => {
 			state.loading = false;
 			state.isUpdated = false;
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 		builder.addCase(updateUser.pending, (state, action) => {
 			state.loading = true;
@@ -156,7 +156,7 @@ const userSlice = createSlice({
 		builder.addCase(updateUser.rejected, (state, action) => {
 			state.loading = false;
 			state.isUpdated = false;
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 		builder.addCase(deleteUser.pending, (state, action) => {
 			state.loading = true;
@@ -177,7 +177,7 @@ const userSlice = createSlice({
 			state.loading = false;
 			state.isUpdated = false;
 			state.isDeleted = false;
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 	},
 });

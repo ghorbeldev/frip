@@ -43,7 +43,7 @@ const userDetailsSlice = createSlice({
 		builder.addCase(getUserDetails.rejected, (state, action) => {
 			state.loading = false;
 			state.user = {};
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 	},
 });

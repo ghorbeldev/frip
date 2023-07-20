@@ -70,7 +70,7 @@ const forgotPasswordSlice = createSlice({
 		builder.addCase(forgotPasswordFetch.rejected, (state, action) => {
 			state.loading = false;
 			state.message = '';
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 
 		builder.addCase(resetPassword.pending, (state, action) => {
@@ -89,7 +89,7 @@ const forgotPasswordSlice = createSlice({
 			state.loading = false;
 			state.message = null;
 			state.success = false;
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 	},
 });

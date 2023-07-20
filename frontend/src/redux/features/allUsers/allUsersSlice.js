@@ -40,7 +40,7 @@ const allUsersSLice = createSlice({
 			state.loading = false;
 			state.users = [];
 			console.log(action.error);
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 	},
 });

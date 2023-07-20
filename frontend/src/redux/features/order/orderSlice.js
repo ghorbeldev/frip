@@ -72,7 +72,7 @@ const orderSlice = createSlice({
 			state.loading = false;
 			state.isUpdated = false;
 			state.isDeleted = false;
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 		builder.addCase(deleteOrder.pending, (state, action) => {
 			state.loading = true;
@@ -90,7 +90,7 @@ const orderSlice = createSlice({
 			state.loading = false;
 			state.isUpdated = false;
 			state.isDeleted = false;
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 	},
 });

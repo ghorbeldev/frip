@@ -77,7 +77,7 @@ const authSlice = createSlice({
 			state.loading = false;
 			state.isAuthenticated = false;
 			state.user = {};
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 		builder.addCase(loadUser.pending, state => {
 			state.loading = true;
@@ -95,7 +95,7 @@ const authSlice = createSlice({
 			state.loading = false;
 			state.isAuthenticated = false;
 			state.user = {};
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 		builder.addCase(registerUser.pending, state => {
 			state.loading = true;
@@ -113,7 +113,7 @@ const authSlice = createSlice({
 			state.loading = false;
 			state.isAuthenticated = false;
 			state.user = {};
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 
 		builder.addCase(logout.fulfilled, (state, action) => {
@@ -124,7 +124,7 @@ const authSlice = createSlice({
 		});
 
 		builder.addCase(logout.rejected, (state, action) => {
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 	},
 });

@@ -45,7 +45,7 @@ const productDetailsSlice = createSlice({
 		builder.addCase(fetchProductDetails.rejected, (state, action) => {
 			state.loading = false;
 			state.details = {};
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 	},
 });

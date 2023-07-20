@@ -104,7 +104,7 @@ const cartSlice = createSlice({
 			localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
 		});
 		builder.addCase(addItemToCart.rejected, (state, action) => {
-			state.error = action.error.message;
+			state.error = action.error.message || 'Internal Server Error';
 		});
 	},
 });
