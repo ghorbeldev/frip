@@ -13,12 +13,12 @@ import Sidebar from '../sidebar/Sidebar';
 
 const NewProduct = () => {
 	const [name, setName] = useState('');
-	const [price, setPrice] = useState(0);
+	const [price, setPrice] = useState(8);
 	const [description, setDescription] = useState('');
 	const [category, setCategory] = useState('men');
 	const [size, setSize] = useState('s');
-	const [stock, setStock] = useState(0);
-	const [seller, setSeller] = useState('');
+	const [stock, setStock] = useState(1);
+	const [seller, setSeller] = useState('Frip Online');
 	const [images, setImages] = useState([]);
 	const [imagesPreview, setImagesPreview] = useState([]);
 	const navigate = useNavigate();
@@ -46,23 +46,32 @@ const NewProduct = () => {
 	const submitHandler = e => {
 		e.preventDefault();
 
-		const formData = new FormData();
-		formData.set('name', name);
-		formData.set('price', price);
-		formData.set('description', description);
-		formData.set('category', category);
-		formData.set('size', size);
-		formData.set('stock', stock);
-		formData.set('seller', seller);
+		// const formData = new FormData();
+		// formData.set('name', name);
+		// formData.set('price', price);
+		// formData.set('description', description);
+		// formData.set('category', category);
+		// formData.set('size', size);
+		// formData.set('stock', stock);
+		// formData.set('seller', seller);
 
-		images.forEach(image => {
-			formData.append('images', image);
-		});
-		for (var pair of formData.entries()) {
-			console.log(pair[0] + ', ' + pair[1]);
-		}
-		dispatch(newProduct(formData));
+		// images.forEach(image => {
+		// 	formData.append('images', image);
+		// });
+		dispatch(
+			newProduct({
+				name,
+				price,
+				description,
+				category,
+				size,
+				stock,
+				seller,
+				images,
+			})
+		);
 	};
+
 	const onChange = e => {
 		const files = Array.from(e.target.files);
 
@@ -216,9 +225,8 @@ const NewProduct = () => {
 								</div>
 
 								<button
-									id='login_button'
 									type='submit'
-									className='btn btn-block py-3'
+									className='btn py-3 mt-3'
 									disabled={loading ? true : false}
 								>
 									CREATE

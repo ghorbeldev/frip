@@ -28,7 +28,6 @@ export const updateProduct = createAsyncThunk(
 			},
 		};
 		try {
-			console.log(product);
 			const response = await axios.put(
 				`/api/v1/admin/product/${product.id}`,
 				product.data,

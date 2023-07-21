@@ -14,9 +14,8 @@ exports.newProduct = catchAsyncErrors(async (req, res, next) => {
 	}
 
 	let imagesLinks = [];
-
 	for (let i = 0; i < images.length; i++) {
-		const result = await cloudinary.v2.uploader.upload(images[i], {
+		const result = await cloudinary.v2.uploader.upload(String(images[i]), {
 			folder: 'products',
 		});
 		imagesLinks.push({
