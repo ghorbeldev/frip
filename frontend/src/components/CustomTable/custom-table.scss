@@ -12,4 +12,8 @@
 	td.pivoted:not(:last-child) {
 		border-bottom: 1px solid #aaa !important;
 	}
+	td {
+		text-align: center;
+		vertical-align: middle;
+	}
 }

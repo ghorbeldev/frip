@@ -11,10 +11,13 @@
 	padding: 1.5rem 1rem;
 	border-radius: 8px;
 	border: 2px solid #ddd;
+	gap: 0.4rem;
 	&:not(:last-of-type) {
 		margin-bottom: 2rem;
 	}
 	p {
 		margin-bottom: 0;
+	}
+	@include tablet {
 	}
 }

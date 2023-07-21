@@ -9,6 +9,8 @@ import {
 	updateCartItems,
 } from '../../../redux/features/cart/cartSlice';
 import { AiOutlineDelete } from 'react-icons/ai';
+import { FaTrash } from 'react-icons/fa';
+import { Table, Tbody, Td, Th, Thead, Tr } from 'react-super-responsive-table';
 const Cart = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
@@ -24,7 +26,60 @@ const Cart = () => {
 	useEffect(() => {
 		dispatch(updateCartItems());
 	}, [dispatch]);
-	console.log(cartItems);
+	const setCartItems = () => {
+		const data = {
+			columns: [
+				{
+					label: 'Preview',
+					field: 'preview',
+					sort: 'asc',
+				},
+				{
+					label: 'Name',
+					field: 'name',
+					sort: 'asc',
+				},
+				{
+					label: 'Price',
+					field: 'price',
+					sort: 'asc',
+				},
+				{
+					label: 'Stock',
+					field: 'stock',
+					sort: 'asc',
+				},
+				{
+					label: 'Actions',
+					field: 'actions',
+				},
+			],
+			rows: [],
+		};
+
+		cartItems.forEach(item => {
+			data.rows.push({
+				preview: item.image,
+				name: item.name,
+				price: `${item.price}DT`,
+				stock: item.stock,
+				actions: (
+					<Fragment>
+						<button
+							className='btn btn-danger py-1 px-2 ml-2'
+							onClick={() => removeCartItemHandler(item.product)}
+						>
+							<FaTrash />
+						</button>
+					</Fragment>
+				),
+			});
+		});
+
+		return data;
+	};
+	const cartItemsData = setCartItems();
+
 	return (
 		<div className='cart' id='cart'>
 			<MetaData title={'Your Cart'} />
@@ -38,7 +93,7 @@ const Cart = () => {
 
 					<div className='row d-flex justify-content-between'>
 						<div className='col-12 col-lg-8'>
-							{cartItems.map(item => {
+							{/* {cartItems.map(item => {
 								return (
 									<Fragment key={item.product}>
 										<div className='cart-item' key={item.product}>
@@ -82,7 +137,36 @@ const Cart = () => {
 										</div>
 									</Fragment>
 								);
-							})}
+							})} */}
+							<Table className='custom-table'>
+								<Thead>
+									<Tr>
+										{cartItemsData.columns.map(column => (
+											<Th key={column.label}>{column.label}</Th>
+										))}
+									</Tr>
+								</Thead>
+								<Tbody>
+									{cartItemsData.rows.map((row, indx) => (
+										<Tr key={indx}>
+											{Object.values(row).map((v, i) => {
+												if (i === 0)
+													return (
+														<Td key={i}>
+															<img
+																src={v}
+																alt={row.name}
+																height='90'
+																width='115'
+															/>
+														</Td>
+													);
+												return <Td key={i}>{v}</Td>;
+											})}
+										</Tr>
+									))}
+								</Tbody>
+							</Table>
 						</div>
 
 						<div className='col-12 col-lg-3 my-4'>
