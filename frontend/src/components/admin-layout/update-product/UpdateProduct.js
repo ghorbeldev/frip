@@ -89,20 +89,34 @@ const UpdateProduct = () => {
 	const submitHandler = e => {
 		e.preventDefault();
 
-		const formData = new FormData();
-		formData.set('name', name);
-		formData.set('price', price);
-		formData.set('description', description);
-		formData.set('category', category);
-		formData.set('size', size);
-		formData.set('stock', stock);
-		formData.set('seller', seller);
+		// const formData = new FormData();
+		// formData.set('name', name);
+		// formData.set('price', price);
+		// formData.set('description', description);
+		// formData.set('category', category);
+		// formData.set('size', size);
+		// formData.set('stock', stock);
+		// formData.set('seller', seller);
 
-		images.forEach(image => {
-			formData.append('images', image);
-		});
+		// images.forEach(image => {
+		// 	formData.append('images', image);
+		// });
 
-		dispatch(updateProduct({ id: details._id, data: formData }));
+		dispatch(
+			updateProduct({
+				id: details._id,
+				data: {
+					name,
+					price,
+					description,
+					category,
+					size,
+					stock,
+					seller,
+					images,
+				},
+			})
+		);
 	};
 
 	const onChange = e => {
