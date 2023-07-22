@@ -60,13 +60,13 @@ const Home = () => {
 									</Link>
 								</li>
 								<li>
-									<Link to='/shop?category=kids'>
+									<Link to='/shop?category=women'>
 										<img src='/images/women.webp' alt='Women' />
 										<span>Women</span>
 									</Link>
 								</li>
 								<li>
-									<Link to='/shop?category=women'>
+									<Link to='/shop?category=kids'>
 										<img src='/images/kid.jpg' alt='Kid' />
 										<span>Kids</span>
 									</Link>

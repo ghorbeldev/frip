@@ -113,7 +113,7 @@ const UpdateProduct = () => {
 					size,
 					stock,
 					seller,
-					images,
+					images: images.length === 0 ? undefined : images,
 				},
 			})
 		);
