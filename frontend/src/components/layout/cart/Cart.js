@@ -8,7 +8,6 @@ import {
 	removeItemFromCart,
 	updateCartItems,
 } from '../../../redux/features/cart/cartSlice';
-import { AiOutlineDelete } from 'react-icons/ai';
 import { FaTrash } from 'react-icons/fa';
 import { Table, Tbody, Td, Th, Thead, Tr } from 'react-super-responsive-table';
 const Cart = () => {

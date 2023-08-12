@@ -10,6 +10,7 @@ import {
 	getOrderDetails,
 } from '../../../redux/features/order-details/orderDetailsSlice';
 import './order-details.scss';
+import CustomTable from '../../CustomTable/CustomTable';
 
 const OrderDetails = () => {
 	const params = useParams();
@@ -31,6 +32,49 @@ const OrderDetails = () => {
 			dispatch(clearErrors());
 		}
 	}, [dispatch, alert, error]);
+	const setOrderItems = () => {
+		const data = {
+			columns: [
+				{
+					label: 'Preview',
+					field: 'preview',
+					sort: 'asc',
+					type: 'img',
+				},
+				{
+					label: 'Name',
+					field: 'name',
+					sort: 'asc',
+				},
+				{
+					label: 'Price',
+					field: 'price',
+					sort: 'asc',
+				},
+				{
+					label: 'Quantity',
+					field: 'quantity',
+					sort: 'asc',
+				},
+			],
+			rows: [],
+		};
+		if (orderItems) {
+			orderItems.forEach(item => {
+				data.rows.push({
+					preview: (
+						<img src={item.image} alt={item.name} height='90' width='115' />
+					),
+					name: item.name,
+					price: `${item.price}DT`,
+					quantity: item.quantity,
+				});
+			});
+		}
+
+		return data;
+	};
+	const orderItemsData = setOrderItems();
 
 	const shippingDetails =
 		shippingInfo &&
@@ -63,7 +107,7 @@ const OrderDetails = () => {
 								{shippingDetails}
 							</p>
 							<p>
-								<b>Amount:</b> ${totalPrice}
+								<b>Amount:</b> {totalPrice}DT
 							</p>
 
 							<hr />
@@ -83,35 +127,7 @@ const OrderDetails = () => {
 							<h4 className='my-4'>Order Items:</h4>
 
 							<hr />
-							<div className='cart-item my-1'>
-								{orderItems &&
-									orderItems.map(item => (
-										<div key={item.product} className='row my-5'>
-											<div className='col-4 col-lg-2'>
-												<img
-													src={item.image}
-													alt={item.name}
-													height='45'
-													width='65'
-												/>
-											</div>
-
-											<div className='col-5 col-lg-5'>
-												<Link to={`/products/${item.product}`}>
-													{item.name}
-												</Link>
-											</div>
-
-											<div className='col-4 col-lg-2 mt-4 mt-lg-0'>
-												<p>${item.price}</p>
-											</div>
-
-											<div className='col-4 col-lg-3 mt-4 mt-lg-0'>
-												<p>{item.quantity} Piece(s)</p>
-											</div>
-										</div>
-									))}
-							</div>
+							{orderItems && <CustomTable data={orderItemsData} />}
 							<hr />
 						</div>
 					</div>

@@ -2,9 +2,23 @@
 #dashboard {
 	margin-top: $header-height;
 	min-height: calc(100vh - $header-height);
-
-	.card {
-		height: 100%;
+	padding-right: 2rem;
+	.dashboard-details {
+		@include flex;
+		flex-direction: column;
+		gap: 0.8rem;
+		> .card {
+			width: 100%;
+		}
+		.dashboard-details__info {
+			@include flex;
+			flex-wrap: wrap;
+			.card {
+				width: 300px;
+				height: 150px;
+			}
+			gap: 0.5rem;
+		}
 	}
 
 	.card-title a {
